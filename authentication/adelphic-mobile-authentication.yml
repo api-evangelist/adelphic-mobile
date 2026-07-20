@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: probed
+source: live HTTP probe of https://api.adelphic.com/ (WWW-Authenticate response header)
+summary:
+  types:
+  - http
+  note: >-
+    Adelphic publishes no public OpenAPI or self-service developer auth
+    reference. This profile records what was directly observed by probing the
+    live API host api.adelphic.com, a gated enterprise endpoint (Apache Tomcat)
+    protected by HTTP Basic authentication. Access requires Viant/Adelphic
+    account credentials; there is no public key issuance.
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication. Probing https://api.adelphic.com/ returns
+    401 Unauthorized with header `WWW-Authenticate: Basic realm="Adelphic"`.
+    Credentials are provisioned to enterprise Adelphic DSP accounts.
+  observed:
+    host: https://api.adelphic.com
+    status: 401
+    www_authenticate: Basic realm="Adelphic"
+    server: Apache Tomcat
+  sources:
+  - live probe of https://api.adelphic.com/ on 2026-07-17
