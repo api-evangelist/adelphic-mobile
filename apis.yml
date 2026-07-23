@@ -1,8 +1,18 @@
 aid: adelphic-mobile
 name: Adelphic Mobile *
-description: 'Adelphic Mobile * is a company surfaced as a portfolio company of gv and added to the API
-  Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Adelphic is an enterprise demand-side platform (DSP) for programmatic
+  advertising, originally founded as a mobile-first programmatic buying
+  platform and acquired by Viant Technology in 2017. The Adelphic DSP lets
+  marketers plan, buy, and measure omnichannel campaigns across Connected TV,
+  linear TV, mobile, desktop, streaming audio, and digital out-of-home from a
+  single self-service interface, using Viant's people-based Household ID
+  identity resolution to activate first- and third-party data and measure
+  outcomes. It is offered as an enterprise SaaS platform with a hosted UI,
+  online knowledge base, and certification/Programmatic University training
+  rather than a public developer API; the adelphic.com domain now operates as a
+  legacy redirect surface pointing to Viant's product pages. Added to the API
+  Evangelist network as a portfolio-company profile surfaced from GV.
 url: https://raw.githubusercontent.com/api-evangelist/adelphic-mobile/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +20,32 @@ x-backed-by:
 - gv
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+image: https://www.adelphic.com/favicon.ico
 tags:
 - Company
 - Enterprise
+- Advertising
+- AdTech
+- Programmatic Advertising
+- Demand Side Platform
+- DSP
+- Marketing
+- Connected TV
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +54,13 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://adelphic.com
+  url: https://www.adelphic.com
+- type: DomainSecurity
+  url: security/adelphic-mobile-domain-security.yml
+- type: WellKnown
+  url: well-known/adelphic-mobile-well-known.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
