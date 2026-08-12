@@ -1,27 +1,52 @@
-generated: '2026-07-17'
+generated: '2026-08-12'
 method: probed
-source: live HTTP probe of https://api.adelphic.com/ (WWW-Authenticate response header)
+source: >-
+  live HTTP probe of https://api.adelphic.com/ and https://api.viantinc.com/
+  (WWW-Authenticate response header), re-verified 2026-08-12
 summary:
   types:
   - http
+  api_key_in: []
+  oauth2_flows: []
   note: >-
-    Adelphic publishes no public OpenAPI or self-service developer auth
+    Adelphic publishes no public OpenAPI and no self-service developer auth
     reference. This profile records what was directly observed by probing the
-    live API host api.adelphic.com, a gated enterprise endpoint (Apache Tomcat)
-    protected by HTTP Basic authentication. Access requires Viant/Adelphic
-    account credentials; there is no public key issuance.
+    live API host api.adelphic.com — a gated enterprise endpoint (Java servlet
+    container; JSESSIONID cookie) protected by HTTP Basic authentication.
+    api.viantinc.com returns the byte-identical 401 with the same
+    `Basic realm="Adelphic"` challenge, confirming the two names front the same
+    Adelphic API service. Access requires Viant/Adelphic account credentials;
+    there is no public key issuance and no OAuth or OIDC discovery document
+    (/.well-known/oauth-authorization-server and
+    /.well-known/openid-configuration return 401 on the API host and 404 on the
+    web hosts).
 schemes:
 - name: basicAuth
   type: http
   scheme: basic
   description: >-
-    HTTP Basic authentication. Probing https://api.adelphic.com/ returns
-    401 Unauthorized with header `WWW-Authenticate: Basic realm="Adelphic"`.
-    Credentials are provisioned to enterprise Adelphic DSP accounts.
+    HTTP Basic authentication (RFC 7617). Probing https://api.adelphic.com/
+    returns 401 Unauthorized with header
+    `WWW-Authenticate: Basic realm="Adelphic"`. Credentials are provisioned to
+    enterprise Adelphic DSP accounts.
   observed:
     host: https://api.adelphic.com
     status: 401
     www_authenticate: Basic realm="Adelphic"
-    server: Apache Tomcat
+    set_cookie: JSESSIONID
+    content_type: text/html;charset=utf-8
+    fetched: '2026-08-12'
+  also_observed:
+    host: https://api.viantinc.com
+    status: 401
+    www_authenticate: Basic realm="Adelphic"
+    fetched: '2026-08-12'
   sources:
   - live probe of https://api.adelphic.com/ on 2026-07-17
+  - live probe of https://api.adelphic.com/ and https://api.viantinc.com/ on 2026-08-12
+coverage:
+  gated: true
+  note: >-
+    Every path probed on api.adelphic.com — /, /openapi.json, /swagger.json,
+    /v1/openapi.json, /api-docs, /docs, /redoc and all /.well-known/* — returns
+    401. The contract is behind the credential wall, not absent.

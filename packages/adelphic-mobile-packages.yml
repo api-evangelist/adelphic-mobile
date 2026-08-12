@@ -1,0 +1,37 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  Unauthenticated registry sweep for first-party Adelphic/Viant client
+  libraries, plus a search of the public Adelphic/Viant surface for an SDK or
+  source-code link.
+package_count: 0
+packages: []
+registries_searched:
+- registry: npm
+  endpoint: https://registry.npmjs.org/-/v1/search?text=adelphic
+  results: 0
+- registry: pypi
+  endpoint: https://pypi.org/pypi/adelphic/json
+  results: 0
+  status: 404
+- registry: rubygems
+  endpoint: https://rubygems.org/api/v1/gems/adelphic.json
+  results: 0
+  status: 404
+- registry: crates.io
+  endpoint: https://crates.io/api/v1/crates?q=adelphic
+  results: 0
+github_organization:
+  found: false
+  note: >-
+    No first-party GitHub organization is linked from any public Adelphic or
+    Viant page. Direct api.github.com org lookups for `adelphic`, `viantinc`
+    and `viant-technology` returned 403 from this run's network, so this is
+    recorded as "not linked by the provider" rather than a verified registry
+    absence.
+notes: >-
+  Adelphic ships no public client library. The product is a hosted enterprise
+  DSP (dsp.viantinc.com) whose API host is credential-gated, so there is no
+  self-service surface for an SDK to wrap. NO SDKs pointer is emitted — an
+  SDKs pointer with zero official libraries would credit a provider with client
+  tooling it does not publish.

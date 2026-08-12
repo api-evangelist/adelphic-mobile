@@ -1,0 +1,71 @@
+generated: '2026-08-12'
+method: searched
+source: https://status.adelphic.com/
+ownership_note: >-
+  Adelphic was acquired by Viant Technology in 2017 and is operated as Viant's
+  demand-side platform; adelphic.com now serves only a JavaScript redirect shell
+  pointing at viantinc.com. The status page below is first-party Adelphic: it is
+  reachable at Adelphic's own status.adelphic.com, its Statuspage page object is
+  literally named "Adelphic", its HTML title is "Adelphic Status", and its
+  components are the Adelphic DSP UI and the Adelphic API.
+status_page:
+  url: https://status.adelphic.com/
+  canonical_url: https://status.viantinc.com/
+  provider: Atlassian Statuspage
+  page_id: 031rh0zl5bmh
+  page_name: Adelphic
+  title: Adelphic Status
+  machine_readable:
+  - https://status.viantinc.com/api/v2/summary.json
+  - https://status.viantinc.com/api/v2/components.json
+  - https://status.viantinc.com/api/v2/incidents.json
+  components:
+  - name: DSP UI
+    description: dsp.viantinc.com
+    status_observed: operational
+  - name: API
+    description: API services
+    status_observed: operational
+  observed:
+    fetched: '2026-08-12'
+    http_status: 200
+    indicator: none
+    description: All Systems Operational
+    incidents_in_history: 1
+    most_recent_incident:
+      name: AWS East - Increased API Error Rates
+      impact: critical
+      created_at: '2021-12-07T11:30:00-08:00'
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: >-
+    No public versioning policy is published. The Adelphic API host
+    (api.adelphic.com) returns 401 on every path, and the Adelphic knowledge
+    base at help.viantinc.com/hc/en-us returns 403 to anonymous requests, so
+    no version scheme can be observed without customer credentials.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: >-
+    No deprecation or sunset policy is published on any public Adelphic or
+    Viant page. Probed https://www.viantinc.com/ sitemap and footer; nothing
+    matching a deprecation, sunset, or API lifecycle policy exists. NO
+    Deprecation pointer is emitted.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No public SLA. The Statuspage exposes live component status and incident
+    history but publishes no uptime commitment.
+deprecated_operations: []
+evidence:
+- url: https://status.adelphic.com/
+  status: 200
+- url: https://status.viantinc.com/api/v2/summary.json
+  status: 200
+- url: https://www.viantinc.com/company/security/
+  status: 200
+- url: https://help.viantinc.com/hc/en-us
+  status: 403

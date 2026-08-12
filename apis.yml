@@ -11,8 +11,12 @@ description: >-
   outcomes. It is offered as an enterprise SaaS platform with a hosted UI,
   online knowledge base, and certification/Programmatic University training
   rather than a public developer API; the adelphic.com domain now operates as a
-  legacy redirect surface pointing to Viant's product pages. Added to the API
-  Evangelist network as a portfolio-company profile surfaced from GV.
+  legacy redirect surface pointing to Viant's product pages. An Adelphic API
+  service does exist and is monitored as its own component on the Adelphic
+  status page, but api.adelphic.com answers every path with HTTP 401 and
+  `WWW-Authenticate: Basic realm="Adelphic"`, and the knowledge base is
+  customer-only, so no contract, reference, SDK or pricing is public. Added to
+  the API Evangelist network as a portfolio-company profile surfaced from GV.
 url: https://raw.githubusercontent.com/api-evangelist/adelphic-mobile/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -34,8 +38,8 @@ accessModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
-image: https://www.adelphic.com/favicon.ico
+modified: '2026-08-12'
+image: https://s42464.pcdn.co/wp-content/uploads/2023/02/cropped-favicon-192x192.png
 tags:
 - Company
 - Enterprise
@@ -55,12 +59,49 @@ maintainers:
 common:
 - type: Website
   url: https://www.adelphic.com
+- type: Login
+  url: https://dsp.viantinc.com/login
+- type: Support
+  url: https://www.viantinc.com/contact/
+- type: Blog
+  url: https://www.viantinc.com/insights/blog/
+- type: PrivacyPolicy
+  url: https://www.viantinc.com/privacy-center/
+- type: StatusPage
+  url: https://status.adelphic.com/
+- type: Lifecycle
+  url: lifecycle/adelphic-mobile-lifecycle.yml
+- type: Security
+  url: https://www.viantinc.com/company/security/
+- type: VulnerabilityDisclosure
+  url: security/adelphic-mobile-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/adelphic-mobile-trust-center.yml
+- type: Compliance
+  url: https://www.viantinc.com/company/security/
+- type: Conformance
+  url: conformance/adelphic-mobile-conformance.yml
+- type: Authentication
+  url: authentication/adelphic-mobile-authentication.yml
 - type: DomainSecurity
   url: security/adelphic-mobile-domain-security.yml
-- type: WellKnown
-  url: well-known/adelphic-mobile-well-known.yml
+- type: LLMsTxt
+  url: llms/adelphic-mobile-llms.txt
+- type: Plans
+  url: plans/adelphic-mobile-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/adelphic-mobile-rate-limits.yml
+- type: Packages
+  url: packages/adelphic-mobile-packages.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: enriched
+  artifacts_added: 6
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: >-
+    WellKnown pointer REMOVED — well-known/adelphic-mobile-well-known.yml
+    records a verified absence (404/401 on every path across six hosts, plus a
+    rejected dsp.viantinc.com SPA soft-200), so the pointer was asserting a
+    surface the provider does not serve. No Documentation, SDKs, SecurityTxt,
+    Deprecation, Pricing, TermsOfService, Postman, MCPServer or AgentCard
+    pointer is emitted: each was probed and genuinely missed.

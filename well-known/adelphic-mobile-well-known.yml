@@ -1,21 +1,104 @@
-generated: '2026-07-17'
-method: searched
-source: live probes of /.well-known/ on adelphic.com hosts
+generated: '2026-08-12'
+method: probed
+source: >-
+  Live HTTP probes of /.well-known/ on every Adelphic and Adelphic-operated host
+  (adelphic.com, www.adelphic.com, api.adelphic.com) plus the parent-brand hosts
+  the Adelphic product is actually served from (www.viantinc.com,
+  dsp.viantinc.com, help.viantinc.com).
 host: https://www.adelphic.com
+hosts_probed:
+- https://adelphic.com
+- https://www.adelphic.com
+- https://api.adelphic.com
+- https://www.viantinc.com
+- https://dsp.viantinc.com
+- https://help.viantinc.com
 documents:
 - path: /.well-known/security.txt
   status: 404
+  host: www.adelphic.com
 - path: /.well-known/openid-configuration
   status: 404
+  host: www.adelphic.com
 - path: /.well-known/oauth-authorization-server
   status: 404
+  host: www.adelphic.com
+- path: /.well-known/oauth-protected-resource
+  status: 404
+  host: www.adelphic.com
 - path: /.well-known/api-catalog
   status: 404
+  host: www.adelphic.com
 - path: /.well-known/ai-plugin.json
   status: 404
+  host: www.adelphic.com
+- path: /.well-known/mcp.json
+  status: 404
+  host: www.adelphic.com
+- path: /.well-known/agent-card.json
+  status: 404
+  host: www.adelphic.com
+- path: /.well-known/agent.json
+  status: 404
+  host: www.adelphic.com
+- path: /.well-known/security.txt
+  status: 401
+  host: api.adelphic.com
+  note: >-
+    api.adelphic.com answers 401 with `WWW-Authenticate: Basic realm="Adelphic"`
+    on every path including /.well-known/*, so the discovery surface (if any)
+    is credential-gated, not absent.
+- path: /.well-known/oauth-authorization-server
+  status: 401
+  host: api.adelphic.com
+- path: /.well-known/agent-card.json
+  status: 401
+  host: api.adelphic.com
+- path: /.well-known/security.txt
+  status: 404
+  host: www.viantinc.com
+- path: /.well-known/agent-card.json
+  status: 404
+  host: www.viantinc.com
+- path: /.well-known/agent.json
+  status: 404
+  host: www.viantinc.com
+- path: /.well-known/security.txt
+  status: 404
+  host: help.viantinc.com
+- path: /.well-known/agent-card.json
+  status: 404
+  host: help.viantinc.com
+- path: /.well-known/agent-card.json
+  status: 200
+  host: dsp.viantinc.com
+  document: false
+  note: >-
+    NOT a document. dsp.viantinc.com is an Angular single-page application whose
+    catch-all route answers HTTP 200 with the same `<!doctype html>` app shell
+    for EVERY /.well-known/* path probed (agent-card.json, agent.json,
+    security.txt, openid-configuration, oauth-authorization-server,
+    oauth-protected-resource, api-catalog, ai-plugin.json, mcp.json). Recorded
+    as a miss, not a hit.
+- path: /.well-known/security.txt
+  status: 200
+  host: dsp.viantinc.com
+  document: false
+  note: SPA catch-all HTML shell — see above. Not a security.txt.
+summary:
+  hosts_probed: 6
+  paths_probed: 9
+  real_documents: 0
+  soft_200_spa_shells: 9
 notes: >-
-  No /.well-known/ discovery documents are published on adelphic.com or
-  www.adelphic.com (all probed paths return 404). Adelphic is Viant's
-  enterprise demand-side platform (DSP) with no public developer/API surface;
-  the marketing domain is a legacy JS redirect shell that points product
-  traffic to viantinc.com. Empty is expected here.
+  No /.well-known/ discovery document is published anywhere on the Adelphic
+  surface. adelphic.com and www.adelphic.com are a legacy JavaScript redirect
+  shell that maps retired Adelphic/Specific Media/Vindico domains onto
+  viantinc.com product pages (every content path, including /pricing/ and
+  /clients/, returns 404). The live API host api.adelphic.com — and its sibling
+  api.viantinc.com, which returns the identical `Basic realm="Adelphic"`
+  challenge — is gated behind HTTP Basic authentication on every path, so no
+  anonymous discovery is possible there. dsp.viantinc.com returns a soft 200
+  SPA shell for every path and is explicitly rejected as a false positive.
+  NO WellKnown pointer is emitted in apis.yml: this file records a verified
+  ABSENCE, and a pointer would assert the provider serves a surface it does not.

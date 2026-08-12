@@ -1,0 +1,31 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  Searched https://www.adelphic.com/pricing/ (404), the www.viantinc.com page
+  sitemap (https://www.viantinc.com/page-sitemap.xml), https://www.viantinc.com/pricing/
+  (404) and https://www.viantinc.com/solutions/dsp/ (200) for a published plan
+  or rate card. None exists.
+plan_count: 0
+plans: []
+pricing_model:
+  type: contact-sales
+  self_serve_signup: false
+  free_tier: false
+  trial: false
+  note: >-
+    Adelphic is sold as an enterprise self-service DSP under a negotiated
+    media/platform agreement — buyers are onboarded through Viant sales and
+    then use the hosted DSP at dsp.viantinc.com. No tier list, seat price,
+    platform fee, or take-rate is published anywhere on the public surface.
+    The legacy adelphic.com "pricing" campaign landing pages (referenced by
+    the dspsaving.com / dspsavings.com redirect map still served from
+    www.adelphic.com) are dead: /pricing/ now returns 404.
+evidence:
+- url: https://www.adelphic.com/pricing/
+  status: 404
+- url: https://www.viantinc.com/pricing/
+  status: 404
+- url: https://www.viantinc.com/solutions/dsp/
+  status: 200
+- url: https://www.viantinc.com/contact/
+  status: 200

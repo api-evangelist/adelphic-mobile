@@ -1,0 +1,33 @@
+generated: '2026-08-12'
+method: probed
+source: >-
+  Live probe of https://api.adelphic.com/ and search of every publicly
+  reachable Adelphic/Viant page for a published rate limit. No limits are
+  documented and none can be observed anonymously.
+limit_count: 0
+limits: []
+headers_observed:
+  rate_limit_headers: []
+  retry_after: false
+  note: >-
+    A 401 response from https://api.adelphic.com/ carries only
+    `www-authenticate: Basic realm="Adelphic"`, `set-cookie: JSESSIONID=...`,
+    `server-timing: traceparent`, `access-control-expose-headers: Server-Timing`
+    and `content-language: en`. No X-RateLimit-*, RateLimit-* or Retry-After
+    header is emitted on the unauthenticated path, so the runtime rate-limit
+    signal cannot be characterized without customer credentials.
+exhaustion_status: null
+notes: >-
+  Adelphic publishes no public API reference. The Adelphic knowledge base
+  (help.viantinc.com, served from adelphic.zendesk.com) exposes only four
+  articles anonymously — Chalice, Migrate Campaigns to Viant, Viant DSP
+  Certification Program, Macros 101 — and returns 403 for the help-center HTML
+  itself; the rest of the KB requires a signed-in customer account. An honest
+  zero: limits almost certainly exist behind the wall, but none are published.
+evidence:
+- url: https://api.adelphic.com/
+  status: 401
+- url: https://help.viantinc.com/hc/en-us
+  status: 403
+- url: https://help.viantinc.com/api/v2/help_center/en-us/articles.json
+  status: 200

@@ -1,0 +1,58 @@
+generated: '2026-08-12'
+method: searched
+probe: true
+url: https://trust.viantinc.com/
+platform: UpGuard Trust Center
+ownership_note: >-
+  Adelphic is Viant Technology's DSP (acquired 2017) and publishes no separate
+  trust surface; trust.viantinc.com is the trust center Viant's own security
+  page links to for the SOC 2 report covering the platform Adelphic runs on.
+certifications:
+- SOC 2 Type I
+attestations:
+- id: soc2-type-1
+  name: SOC 2 Type I
+  framework: AICPA SSAE 18
+  statement: >-
+    "Viant's control environment is assessed under the SOC 2 framework,
+    performed in accordance with the AICPA's Statement on Standards for
+    Attestation Engagements No. 18, or SSAE 18."
+  report_access: >-
+    Report is not published openly — "For access to our SOC 2 Report please
+    refer to our trust center" (request-gated behind the UpGuard trust center).
+  source: https://www.viantinc.com/company/security/
+regulatory_posture:
+- id: sox
+  name: Sarbanes-Oxley (SOX)
+  note: 'Referenced as an applicable regime (Viant is a public company, NASDAQ: DSP).'
+- id: ccpa
+  name: California Consumer Privacy Act
+  note: Referenced on the security page and the privacy center.
+- id: gdpr
+  name: GDPR
+  note: >-
+    Addressed through the Viant privacy center and the Ad Platform Privacy
+    Policy; no certification is claimed.
+privacy_center: https://www.viantinc.com/privacy-center/
+not_claimed:
+- ISO 27001
+- PCI DSS
+- HIPAA
+- FedRAMP
+- CSA STAR
+- SOC 2 Type II
+evidence:
+- source: https://trust.viantinc.com/
+  http_status: 200
+  keywords:
+  - trust center
+  note: >-
+    The trust center itself is a client-rendered UpGuard SPA (1,083-byte HTML
+    shell); the named certification above is read from Viant's own
+    server-rendered security page, not inferred from the shell.
+- source: https://www.viantinc.com/company/security/
+  http_status: 200
+  keywords:
+  - soc 2
+  - ssae 18
+  - trust center
