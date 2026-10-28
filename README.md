@@ -64,6 +64,108 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adelphic Mobile * is a company surfaced as a portfolio company of gv and added to the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the enrichment pipeline.
+Adelphic is an enterprise demand-side platform (DSP) for programmatic advertising, originally founded as a mobile-first programmatic buying platform and acquired by Viant Technology in 2017. The Adelphic DSP lets marketers plan, buy, and measure omnichannel campaigns across Connected TV, linear TV, mobile, desktop, streaming audio, and digital out-of-home from a single self-service interface, using Viant's people-based Household ID identity resolution to activate first- and third-party data and measure outcomes. It is offered as an enterprise SaaS platform with a hosted UI, online knowledge base, and certification/Programmatic University training rather than a public developer API; the adelphic.com domain now operates as a legacy redirect surface pointing to Viant's product pages. An Adelphic API service does exist and is monitored as its own component on the Adelphic status page, but api.adelphic.com answers every path with HTTP 401 and `WWW-Authenticate: Basic realm="Adelphic"`, and the knowledge base is customer-only, so no contract, reference, SDK or pricing is public. Added to the API Evangelist network as a portfolio-company profile surfaced from GV.
 
-Backed by: gv — http://adelphic.com
+**Areas:** Company · Enterprise · Advertising · AdTech · Programmatic Advertising · DSP · Marketing · Connected TV
+
+## Adelphic Mobile * on APIs.io
+
+Everything profiled for Adelphic Mobile * is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/adelphic-mobile/](https://apis.io/providers/adelphic-mobile/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Moved to /providers/adelphic-mobile/](https://apis.io/servers/adelphic-mobile/adelphic-mobile/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Adelphic Mobile Authentication](https://apis.io/security/adelphic-mobile/adelphic-mobile-authentication/)
+- [Adelphic Mobile Domain Security](https://apis.io/security/adelphic-mobile/adelphic-mobile-domain-security/)
+- [Adelphic Mobile Trust Center](https://apis.io/security/adelphic-mobile/adelphic-mobile-trust-center/)
+- [Adelphic Mobile Vulnerability Disclosure](https://apis.io/security/adelphic-mobile/adelphic-mobile-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Adelphic Mobile Plans Pricing](https://apis.io/plans/adelphic-mobile/adelphic-mobile-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Adelphic Mobile Rate Limits](https://apis.io/rate-limits/adelphic-mobile/adelphic-mobile-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.adelphic.com)
+- [Support](https://www.viantinc.com/contact/)
+- [Blog](https://www.viantinc.com/insights/blog/)
+- [Security](https://www.viantinc.com/company/security/)
+- [Compliance](https://www.viantinc.com/company/security/)
+- [Privacy policy](https://www.viantinc.com/privacy-center/)
+- [Status](https://status.adelphic.com/)
+
+## API Evangelist rating
+
+**Kin Score 24.3** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 32.9 |
+
+**Agent readiness 7.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 31.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adelphic-mobile/](https://apis.io/providers/adelphic-mobile/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Adelphic Mobile *: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/adelphic-mobile/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
