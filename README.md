@@ -86,22 +86,22 @@ Model Context Protocol servers that expose the API to agents.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Adelphic Mobile Authentication](https://apis.io/security/adelphic-mobile/adelphic-mobile-authentication/)
-- [Adelphic Mobile Domain Security](https://apis.io/security/adelphic-mobile/adelphic-mobile-domain-security/)
-- [Adelphic Mobile Trust Center](https://apis.io/security/adelphic-mobile/adelphic-mobile-trust-center/)
-- [Adelphic Mobile Vulnerability Disclosure](https://apis.io/security/adelphic-mobile/adelphic-mobile-vulnerability-disclosure/)
+- [Adelphic Mobile * Authentication](https://apis.io/security/adelphic-mobile/adelphic-mobile-authentication/)
+- [Adelphic Mobile * Domain Security](https://apis.io/security/adelphic-mobile/adelphic-mobile-domain-security/)
+- [Adelphic Mobile * Trust Center](https://apis.io/security/adelphic-mobile/adelphic-mobile-trust-center/)
+- [Adelphic Mobile * Vulnerability Disclosure](https://apis.io/security/adelphic-mobile/adelphic-mobile-vulnerability-disclosure/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Adelphic Mobile Plans Pricing](https://apis.io/plans/adelphic-mobile/adelphic-mobile-plans-pricing/)
+- [Adelphic Mobile * Plans Pricing](https://apis.io/plans/adelphic-mobile/adelphic-mobile-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Adelphic Mobile Rate Limits](https://apis.io/rate-limits/adelphic-mobile/adelphic-mobile-rate-limits/)
+- [Adelphic Mobile * Rate Limits](https://apis.io/rate-limits/adelphic-mobile/adelphic-mobile-rate-limits/)
 
 ## Where to find this API
 
@@ -117,18 +117,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 24.3** — emerging · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 24.6** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 58.3 |
 | Contract quality | 0.0 |
 | Contract governance | 18.2 |
-| Operational transparency | 26.3 |
+| Operational transparency | 23.8 |
 | Developer ergonomics | 19.0 |
-| Access clarity | 32.9 |
+| Access clarity | 36.2 |
 
-**Agent readiness 7.2** — agent-aware
+**Agent readiness 7.0** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -153,6 +153,10 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | na |
 | Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
 **Regulatory alignment 31.4** — Horizontal (data, software, accessibility, platform)
 
